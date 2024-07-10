@@ -3,29 +3,30 @@
 ```mermaid
 classDiagram
     class iPhone {
-        +playMusic()
-        +makeCall()
-        +browseInternet()
+        +tocarMusica()
+        +fazerLigacao()
+        +navegarInternet()
     }
 
     class MusicPlayer {
         <<interface>>
-        +play()
-        +pause()
-        +stop()
+        +tocar()
+        +pausar()
+        +selecionarMusica(musica: String)
     }
 
     class Phone {
         <<interface>>
-        +dial(number: String)
-        +hangUp()
+        +ligar(numero: String)
+        +atender()
+        +iniciarCorreioVoz()
     }
 
     class InternetBrowser {
         <<interface>>
-        +openUrl(url: String)
-        +refresh()
-        +back()
+        +exibirPagina(url: String)
+        +adicionarNovaAba()
+        +atualizarPagina()
     }
 
     iPhone ..|> MusicPlayer
